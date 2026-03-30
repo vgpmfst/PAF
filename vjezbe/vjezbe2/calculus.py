@@ -16,7 +16,7 @@ def derivacija_raspon(f,donja,gornja,ϵ=0.00001,metoda="three-step"):
 
     korak = (gornja - donja)/100
     x = np.linspace(donja,gornja,100)
-
+   
     if metoda == "three-step":
             derivacija = (f(x + ϵ) - f(x - ϵ)) / (2 * ϵ)
     elif metoda == "two-step":
@@ -31,7 +31,7 @@ def integral_pravokutnici(f,donja,gornja,n):
     if donja > gornja:
         print("Donja granica funkcije mora biti manja ili jednaka gornjoj!")    
         return
-    x = np.linspace(donja, gornja, n)
+    x = np.linspace(donja, gornja, n+1)
 
     dx = (gornja - donja) / n
 
@@ -40,7 +40,7 @@ def integral_pravokutnici(f,donja,gornja,n):
 
     for i in range(n):
         lijeva = f(x[i])
-        desna = f(x[i])
+        desna = f(x[i+1])
 
         donja_suma += min(lijeva, desna) * dx
         gornja_suma += max(lijeva, desna) * dx

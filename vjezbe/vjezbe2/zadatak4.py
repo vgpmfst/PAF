@@ -28,10 +28,10 @@ for n in koraci:
     trapez.append(t)
 
 # crtanje grafa
-plt.plot(koraci, [analiticki]*len(koraci), label="Analitičko", linewidth=2)
-plt.plot(koraci, prav_donja, 'o-', label="Pravokutnici (donja)")
-plt.plot(koraci, prav_gornja, 'o-', label="Pravokutnici (gornja)")
-plt.plot(koraci, trapez, 'o-', label="Trapez")
+plt.plot(koraci, [analiticki]*len(koraci), label="Analitičko")
+plt.plot(koraci, prav_donja, c = "r", label="Pravokutnici (donja)")
+plt.plot(koraci, prav_gornja, c = "g", label="Pravokutnici (gornja)")
+plt.plot(koraci, trapez, c = "b", label="Trapez")
 plt.xlabel("Broj podjela")
 plt.ylabel("Vrijednost integrala")
 plt.title("Numerička integracija")
