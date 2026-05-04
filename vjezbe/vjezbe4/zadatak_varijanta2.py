@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 q=1.602e-19 #c
 m=9.11e-31 #kg
 B = np.array([0.0,0.0,1.0])
-E = np.array([0.0,0.0,0.0])
+E = np.array([2.0,2.0,1.0])
 v0 = np.array([1.0,1.0,1.0])
 r0 = np.array([0.0,0.0,0.0])
 dt = 1e-14 #s
